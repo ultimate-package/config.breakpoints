@@ -22,7 +22,7 @@ $width__large: 750px;
 $width__largest: 900px;
 ```
 
-Afterwards we can then add these values to the `$breakpoints` list beneath them
+Afterwards we can then add these variables to the `$breakpoints` list beneath. These specific names for breakpoints gives the design and development teams a shared vocabulary of terms. It also stops us from adding element specific media queries and using random numbers:
 
 ```scss
 $breakpoint-to-ems: true;
@@ -37,8 +37,7 @@ $breakpoints: add-breakpoint('medium and above', ($width__medium, $no-queries));
 $breakpoints: add-breakpoint('between medium and large', ($width__medium $width__large));
 ```
 
-
-Then, inside another module (say `_media.scss` or `_island.scss`), we can take advantage of Breakpoint’s `respond-to mixin` to create simple, legible media queries like so:
+Finally in another module (say `_media.scss` or `_island.scss`), we can take advantage of Breakpoint’s `respond-to mixin` to create simple, legible media queries like so:
 
 ```scss
 .module {
@@ -57,14 +56,17 @@ Then, inside another module (say `_media.scss` or `_island.scss`), we can take a
 
 ## Browser support 
 
-This set up is designed to allow us to easily serve stylesheets to more difficult browsers. If we needed to serve stuf
-
+This set up is designed to allow us to easily serve stylesheets to more difficult browsers. If we needed to serve IE8 with alternative styles then in an `ie8.scss` file that imports the other modules we can set these variables: 
 
 ```
 $breakpoint-no-queries: true;
 $breakpoint-no-query-fallbacks: true;
 ```
 
+This will strip out the media queries in the `respond-to` mixin but it’ll include all of the styles from every breakpoint in a module.
+
+
+## Documentation
 
 For more information visit the [Breakpoint docs](http://breakpoint-sass.com/) or read more about the [respond-to mixin](https://github.com/Team-Sass/breakpoint/wiki/Respond-To) that we use above.
 
