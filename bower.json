@@ -1,0 +1,23 @@
+{
+  "name": "config.breakpoints",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ultimate-package/config.breakpoints",
+  "authors": [
+    "Robin Rendle <robin@erskinedesign.com>"
+  ],
+  "description": "Defines the global breakpoints and width variables for generating media queries in CSS.",
+  "main": "_breakpoint-settings.scss",
+  "keywords": [
+    "breakpoint",
+    "sass",
+    "settings"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
