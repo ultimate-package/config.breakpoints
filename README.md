@@ -1,23 +1,19 @@
 config.breakpoints
 ==================
 
-This module defines the global breakpoints and width variables for generating media queries in CSS.
+Defines the global breakpoints and width variables for generating media queries in CSS. This module contains the defaults for [Breakpoint](http://breakpoint-sass.com/), a [Compass](http://compass-style.org/) extension, which helps us write simple responsive components. 
 
-# Dependencies
-
-We use [Breakpoint](http://breakpoint-sass.com/), a [Compass](http://compass-style.org/) extension which helps us write simple media queries. This module is a collection of default settings for a project, for instance when we import our styles into a single stylesheet we’ll import these settings after we import Compass and Breakpoint like this:
+When we import our styles into a single stylesheet we’ll import these settings after we import Compass and Breakpoint:
 
 ```scss
 @import "compass";
 @import "breakpoint"
-
 @import "breakpoint-settings"
 
 @import "styles";
 ```
 
-
-First we set the default min-width breakpoints and then add these values to the $breakpoints list. With the breakpoint respond-to feature we can then use media queries like this:
+Once we’ve set the default min-width breakpoints in the `_breakpoint-settings.scss` file we can then add these values to the `$breakpoints` list. Then, with the breakpoint respond-to mixin we can create simple, legible media queries like this:
 
 ```scss
 .module {
