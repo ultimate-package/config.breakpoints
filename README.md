@@ -7,8 +7,8 @@ When we import our styles into a single stylesheet we’ll import these settings
 
 ```scss
 @import "compass";
-@import "breakpoint"
-@import "breakpoint-settings"
+@import "breakpoint";
+@import "breakpoint-settings";
 
 @import "styles";
 ```
